@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="pathology-related-practitioner-roles"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-06-15T14:39:37.887+00:00"/>
+        <source value="#i3Mi5sVLVXeGgKOR"/>
+    </meta>
+    <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/ValueSet/pathology-related-practitioner-roles"/>
+    <name value="PathologyRelatedPractitionerRoles"/>
+    <title value="Pathology Related PractitionerRoles"/>
+    <status value="draft"/>
+    <compose>
+        <include>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+            <version value="2018-08-12"/>
+            <concept>
+                <code value="ADM"/>
+                <display value="admitter"/>
+            </concept>
+            <concept>
+                <code value="ATND"/>
+                <display value="attender"/>
+            </concept>
+            <concept>
+                <code value="CON"/>
+                <display value="consultant"/>
+            </concept>
+            <concept>
+                <code value="REF"/>
+                <display value="referrer"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/CodeSystem/pathology-related-practitioner-roles"/>
+            <concept>
+                <code value="collector"/>
+                <display value="Physician Primary Surgeon"/>
+            </concept>
+            <concept>
+                <code value="orderer"/>
+                <display value="Physician Ordering Pathology testing"/>
+            </concept>
+            <concept>
+                <code value="principal-result-interpretter"/>
+                <display value="Pathologist principally interpretting results on pathology testing"/>
+            </concept>
+            <concept>
+                <code value="responsible-observer"/>
+                <display value="Pathologist responsible for observing pathology testing"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

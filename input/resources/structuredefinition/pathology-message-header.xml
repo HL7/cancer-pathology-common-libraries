@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="pathology-message-header"/>
+    <meta>
+        <versionId value="4"/>
+        <lastUpdated value="2021-06-15T15:43:06.369+00:00"/>
+        <source value="#cSYN7yGTwDsefUHe"/>
+    </meta>
+    <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-header"/>
+    <name value="PathologyMessageHealder"/>
+    <title value="Pathology Message Healder"/>
+    <status value="active"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="MessageHeader"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MessageHeader"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="MessageHeader">
+            <path value="MessageHeader"/>
+        </element>
+        <element id="MessageHeader.event[x]">
+            <path value="MessageHeader.event[x]"/>
+            <binding>
+                <strength value="example"/>
+                <valueSet value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/ValueSet/us-ph-message-types"/>
+            </binding>
+        </element>
+        <element id="MessageHeader.focus">
+            <path value="MessageHeader.focus"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-diagnostic-report"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

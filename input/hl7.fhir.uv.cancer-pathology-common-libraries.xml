@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide
+    xmlns="http://hl7.org/fhir">
+    <id value="hl7.fhir.uv.cancer-pathology-common-libraries"/>
+    <meta>
+        <versionId value="19"/>
+        <lastUpdated value="2021-06-15T18:30:51.217+00:00"/>
+        <source value="#FFbjy91WWdL1DuXU"/>
+    </meta>
+    <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/ImplementationGuide/hl7.fhir.uv.cancer-pathology-common-libraries"/>
+    <version value="0.1.0"/>
+    <name value="CancerCommonLibrary"/>
+    <title value="Pathology Data Common Library"/>
+    <status value="draft"/>
+    <contact>
+        <name value="HL7 International - Orders and Observations"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/orders"/>
+        </telecom>
+    </contact>
+    <description value="The purpose of this project is to create an HL7 Fast Healthcare Interoperability Resources (FHIR) Library standard to support the needs of multiple standard Cancer interoperability scenarios.To avoid defining the same profiles multiple times, this guide defines Universal Realm focused profiles library for use by Cancer information systems in every realm, and other FHIR standards development efforts to define the appropriate US-specific FHIR profiles, value sets, etc., once and allow them to be referenced by each of the specific implementation guides. This profile library will provide a standard framework for inclusion in multiple use case specific implementation guides focused on the exchange of Cancer information to support interoperability among public health systems and reduce provider and implementer burden."/>
+    <jurisdiction>
+        <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+        </coding>
+        <text value="World"/>
+    </jurisdiction>
+    <packageId value="hl7.fhir.uv.cancer-pathology-common-libraries"/>
+    <fhirVersion value="4.0.1"/>
+    <definition>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/pathology-message-header"/>
+                <display value="PathologyMessageHealder"/>
+            </reference>
+            <name value="PathologyMessageHealder"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/pathology-message-bundle"/>
+                <display value="PathologyMessageBundle"/>
+            </reference>
+            <name value="PathologyMessageBundle"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/pathology-next-of-kin"/>
+                <display value="PathologyNextOfKin"/>
+            </reference>
+            <name value="PathologyNextOfKin"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/pathology-diagnostic-report"/>
+                <display value="PathologyDiagnosticReport"/>
+            </reference>
+            <name value="PathologyDiagnosticReport"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/pathology-practitioner-role"/>
+                <display value="Pathology Related PractitionerRole"/>
+            </reference>
+            <name value="PathologyRelatedPractitionerRoles"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/pathology-related-practitioner-roles"/>
+                <display value="Pathology Related PractitionerRoles"/>
+            </reference>
+            <name value="Pathology Related PractitionerRoles"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CodeSystem/pathology-related-practitioner-roles"/>
+                <display value="Pathology Related PractitionerRoles"/>
+            </reference>
+            <name value="Pathology Related PractitionerRoles"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/pathology-specimen"/>
+                <display value="PathologySpecimen"/>
+            </reference>
+            <name value="PathologySpecimen"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Bundle/cancer-uv-working-message-bundle"/></reference>
+            <name value="Universal Bundle example"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-bundle"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="CodeSystem/us-ph-messageheader-message-types"/>
+                <display value="US Public Health Message Type Codes"/>
+            </reference>
+            <name value="US Public Health Message Type Codes"/>
+            <description value="The US Public Health Message Header Events CodeSystem is a 'starter set' of codes supported for identifying types of messages being exchanged."/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ValueSet/us-ph-message-types"/>
+                <display value="US Public Health MessageTypes"/>
+            </reference>
+            <name value="US Public Health MessageTypes"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <page>
+            <nameUrl value="index.html"/>
+            <title value="Home Page"/>
+            <generation value="markdown"/>
+        </page>
+        <parameter>
+            <code value="copyrightyear"/>
+            <value value="2020+"/>
+        </parameter>
+        <parameter>
+            <code value="releaselabel"/>
+            <value value="CI Build"/>
+        </parameter>
+    </definition>
+</ImplementationGuide>

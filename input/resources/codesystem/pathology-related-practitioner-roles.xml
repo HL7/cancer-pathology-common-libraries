@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem
+    xmlns="http://hl7.org/fhir">
+    <id value="pathology-related-practitioner-roles"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-06-15T14:38:25.407+00:00"/>
+        <source value="#da0A24KX7jKp43Ky"/>
+    </meta>
+    <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/CodeSystem/pathology-related-practitioner-roles"/>
+    <name value="PathologyRelatedPractitionerRoles"/>
+    <title value="Pathology Related PractitionerRoles"/>
+    <status value="draft"/>
+    <content value="complete"/>
+    <concept>
+        <code value="collector"/>
+        <display value="Physician Primary Surgeon"/>
+        <definition value="The Primary Surgeon who obtained the specimen"/>
+    </concept>
+    <concept>
+        <code value="orderer"/>
+        <display value="Physician Ordering Pathology testing"/>
+        <definition value="The Physician who orders the pathology testing"/>
+    </concept>
+    <concept>
+        <code value="principal-result-interpretter"/>
+        <display value="Pathologist principally interpretting results on pathology testing"/>
+        <definition value="Pathologist principally interpretting results on pathology testing"/>
+    </concept>
+    <concept>
+        <code value="responsible-observer"/>
+        <display value="Pathologist responsible for observing pathology testing"/>
+        <definition value="Pathologist responsible for observing pathology testing"/>
+    </concept>
+</CodeSystem>
