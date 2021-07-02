@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="pathology-specimen"/>
     <meta>
-        <versionId value="14"/>
-        <lastUpdated value="2021-06-15T14:42:30.118+00:00"/>
-        <source value="#wy5F3pqDfF8PrJJh"/>
+        <versionId value="18"/>
+        <lastUpdated value="2021-06-18T15:03:37.856+00:00"/>
+        <source value="#NtG0uvfqkL26jXMi"/>
     </meta>
     <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-specimen"/>
     <name value="PathologySpecimen"/>

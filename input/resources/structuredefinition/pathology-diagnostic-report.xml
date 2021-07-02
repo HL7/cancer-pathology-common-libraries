@@ -3,13 +3,13 @@
     xmlns="http://hl7.org/fhir">
     <id value="pathology-diagnostic-report"/>
     <meta>
-        <versionId value="12"/>
-        <lastUpdated value="2021-06-15T16:02:51.225+00:00"/>
-        <source value="#ilLXoV5ac1tBUUyT"/>
+        <versionId value="21"/>
+        <lastUpdated value="2021-06-18T15:03:58.142+00:00"/>
+        <source value="#Qo7wbtwQBpH7xnQ2"/>
     </meta>
     <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-diagnostic-report"/>
     <name value="PathologyDiagnosticReport"/>
-    <title value="Pathology Diagnostic Report"/>
+    <title value="Pathology DiagnosticReport"/>
     <status value="active"/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
@@ -24,11 +24,11 @@
         <element id="DiagnosticReport.subject">
             <path value="DiagnosticReport.subject"/>
             <min value="1"/>
+            <max value="1"/>
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
             </type>
-            <mustSupport value="true"/>
         </element>
         <element id="DiagnosticReport.performer">
             <path value="DiagnosticReport.performer"/>

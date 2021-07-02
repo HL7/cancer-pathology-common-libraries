@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner
+    xmlns="http://hl7.org/fhir">
+    <id value="oncologist-example-uv"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-28T17:49:54.970+00:00"/>
+        <source value="#JcbzixVJPW4SfMVP"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+    </meta>
+    <identifier>
+        <system value="http://hl7.org/fhir/sid/us-npi"/>
+        <value value="123456789"/>
+    </identifier>
+    <name>
+        <family value="Owl"/>
+        <given value="Wise"/>
+    </name>
+</Practitioner>

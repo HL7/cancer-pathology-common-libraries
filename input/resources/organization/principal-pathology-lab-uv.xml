@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization
+    xmlns="http://hl7.org/fhir">
+    <id value="principal-pathology-lab-uv"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-28T17:48:36.636+00:00"/>
+        <source value="#78dItPK9lwpZNa5b"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    </meta>
+    <active value="true"/>
+    <name value="Some Pathology Lab Name"/>
+    <address>
+        <line value="Any"/>
+        <city value="City"/>
+        <state value="CA"/>
+        <postalCode value="95540"/>
+        <country value="USA"/>
+    </address>
+</Organization>

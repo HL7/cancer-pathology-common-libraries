@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization
+    xmlns="http://hl7.org/fhir">
+    <id value="Redwood-Womens-Center-PC-uv"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-28T17:49:33.642+00:00"/>
+        <source value="#CC7g2oZ3rCi68vZ9"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    </meta>
+    <active value="true"/>
+    <name value="Redwood Women's Center, P.C."/>
+    <address>
+        <line value="3307 Renner Drive"/>
+        <city value="Fortuna"/>
+        <state value="CA"/>
+        <postalCode value="95540"/>
+        <country value="USA"/>
+    </address>
+</Organization>
