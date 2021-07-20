@@ -3,14 +3,14 @@
     xmlns="http://hl7.org/fhir">
     <id value="hl7.fhir.uv.cancer-pathology-common-libraries"/>
     <meta>
-        <versionId value="44"/>
-        <lastUpdated value="2021-07-02T15:01:02.908+00:00"/>
-        <source value="#3iYOX2qcmkGD5hG6"/>
+        <versionId value="70"/>
+        <lastUpdated value="2021-07-20T12:43:31.893+00:00"/>
+        <source value="#BrA10kZpPQ8rMJJT"/>
     </meta>
     <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/ImplementationGuide/hl7.fhir.uv.cancer-pathology-common-libraries"/>
     <version value="0.1.0"/>
     <name value="UVCancerCommonLibrary"/>
-    <title value="Cancer Pathology Common Library"/>
+    <title value="Cancer Pathology Common Profiles Library"/>
     <status value="draft"/>
     <contact>
         <name value="HL7 International - Orders and Observations"/>
@@ -19,7 +19,7 @@
             <value value="http://www.hl7.org/Special/committees/orders"/>
         </telecom>
     </contact>
-    <description value="The purpose of this project is to create an HL7 Fast Healthcare Interoperability Resources (FHIR) Library standard to support the needs of multiple standard Cancer interoperability scenarios. To avoid defining the same profiles multiple times, this guide defines Universal Realm focused profiles library for use by Cancer information systems in every realm, and other FHIR standards development efforts to define the appropriate US-specific FHIR profiles, value sets, etc., once and allow them to be referenced by each of the specific implementation guides. This profile library will provide a standard framework for inclusion in multiple use case specific implementation guides focused on the exchange of Cancer information to support interoperability among public health systems and reduce provider and implementer burden."/>
+    <description value="This FHIR resources library supports the needs of realm-specific cancer pathology reporting implementation guides. It does not provide any use case or scenario specific content or additional guidance on how to use these artifacts, but serves as a source for a standard set of profiles for reuse in multiple use case specific implementation guides focusing on the exchange of cancer pathology information. Implementation details such as how and when to use a given artifact, value set definitions, etc. will be supplied in these guides."/>
     <jurisdiction>
         <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -42,21 +42,41 @@
         </grouping>
         <resource>
             <reference>
-                <reference value="StructureDefinition/pathology-message-header"/>
-                <display value="PathologyMessageHealder"/>
+                <reference value="StructureDefinition/pathology-message-bundle"/>
+                <display value="PathologyMessageBundle"/>
             </reference>
-            <name value="Pathology MessageHealder"/>
+            <name value="Pathology Bundle"/>
+            <description value="This profile specifies universal message Bundle requirements for sharing information between a pathology laboratory environment and a clinical (EHR) system"/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/pathology-message-header"/>
+                <display value="PathologyMessageHeader"/>
+            </reference>
+            <name value="Pathology MessageHeader"/>
             <description value="This profile specifies universal MessageHeader requirements for sharing information between a pathology laboratory environment and a clinical (EHR) system"/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group1"/>
         </resource>
         <resource>
             <reference>
-                <reference value="StructureDefinition/pathology-message-bundle"/>
-                <display value="PathologyMessageBundle"/>
+                <reference value="StructureDefinition/pathology-diagnostic-report"/>
+                <display value="Pathology DiagnosticReport"/>
             </reference>
-            <name value="Pathology Bundle"/>
-            <description value="This profile specifies universal message Bundle requirements for sharing information between a pathology laboratory environment and a clinical (EHR) system"/>
+            <name value="Pathology DiagnosticReport"/>
+            <description value="This profile on DiagnosticReport specifies a given order/request for Pathology laboratory analysis of a specimen."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group1"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/pathology-specimen"/>
+                <display value="PathologySpecimen"/>
+            </reference>
+            <name value="Pathology Specimen"/>
+            <description value="This Specimen profiles the general requirements for conveying specimen (SPM) segment information for pathology-related data exchange."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group1"/>
         </resource>
@@ -82,6 +102,16 @@
         </resource>
         <resource>
             <reference>
+                <reference value="ValueSet/us-ph-message-types"/>
+                <display value="US Public Health MessageTypes"/>
+            </reference>
+            <name value="US Public Health MessageTypes"/>
+            <description value="This ValueSet specifies possible concepts for MessageHeader types in the sharing of pathology and clinical information exchange."/>
+            <exampleBoolean value="false"/>
+            <groupingId value="new-group2"/>
+        </resource>
+        <resource>
+            <reference>
                 <reference value="ValueSet/pathology-related-practitioner-roles"/>
                 <display value="Pathology Related PractitionerRoles"/>
             </reference>
@@ -92,11 +122,11 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/us-ph-message-types"/>
-                <display value="US Public Health MessageTypes"/>
+                <reference value="CodeSystem/us-ph-messageheader-message-types"/>
+                <display value="US Public Health Message Type Codes"/>
             </reference>
-            <name value="US Public Health MessageTypes"/>
-            <description value="This ValueSet specifies possible concepts for MessageHeader types in the sharing of pathology and clinical information exchange."/>
+            <name value="US Public Health Message Type Code System"/>
+            <description value="This CodeSystem is bound as with an Example binding strength and is intended to show possible concepts for roles related to pathology and clinical information exchange."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group2"/>
         </resource>
@@ -120,36 +150,6 @@
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-bundle"/>
             <groupingId value="new-group3"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="CodeSystem/us-ph-messageheader-message-types"/>
-                <display value="US Public Health Message Type Codes"/>
-            </reference>
-            <name value="US Public Health Message Type Code System"/>
-            <description value="This CodeSystem is bound as with an Example binding strength and is intended to show possible concepts for roles related to pathology and clinical information exchange."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group2"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="StructureDefinition/pathology-diagnostic-report"/>
-                <display value="Pathology DiagnosticReport"/>
-            </reference>
-            <name value="Pathology DiagnosticReport"/>
-            <description value="This profile on DiagnosticReport specifies a given order/request for Pathology laboratory analysis of a specimen."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group1"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="StructureDefinition/pathology-specimen"/>
-                <display value="PathologySpecimen"/>
-            </reference>
-            <name value="Pathology Adrenal Specimen"/>
-            <description value="This Specimen profiles the general requirements for conveying specimen (SPM) segment information for pathology-related data exchange."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group1"/>
         </resource>
         <resource>
             <reference>
@@ -200,7 +200,7 @@
                 <reference value="Encounter/pathology-encounter-uv"/>
                 <display value="Encounter- pathology-realted encounter"/>
             </reference>
-            <name value="Encounter- pathology-realted encounter"/>
+            <name value="Encounter-pathology-related encounter"/>
             <description value="Universal Pathology Encounter example"/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
@@ -368,7 +368,7 @@
         <resource>
             <reference>
                 <reference value="Observation/2149.100004300"/></reference>
-            <name value="Distant Metastais (pM): Not applicable- pM cannot be determined from the submitted specimen(s) (example)"/>
+            <name value="Distant Metastasis (pM): Not applicable- pM cannot be determined from the submitted specimen(s) (example)"/>
             <description value="SDC on FHIR Observation (general)"/>
             <exampleBoolean value="true"/>
             <groupingId value="new-group3"/>
@@ -377,6 +377,21 @@
             <nameUrl value="index.html"/>
             <title value="Home Page"/>
             <generation value="markdown"/>
+            <page>
+                <nameUrl value="background.html"/>
+                <title value="Background"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="specification.html"/>
+                <title value="Specification"/>
+                <generation value="markdown"/>
+                <page>
+                    <nameUrl value="downloads.html"/>
+                    <title value="Downloads"/>
+                    <generation value="markdown"/>
+                </page>
+            </page>
         </page>
         <parameter>
             <code value="copyrightyear"/>

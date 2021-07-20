@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="pathology-related-practitioner-roles"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-06-15T14:38:25.407+00:00"/>
-        <source value="#da0A24KX7jKp43Ky"/>
+        <versionId value="3"/>
+        <lastUpdated value="2021-07-15T20:58:47.090+00:00"/>
+        <source value="#udo5bIC83MUXzx4k"/>
     </meta>
     <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/CodeSystem/pathology-related-practitioner-roles"/>
     <name value="PathologyRelatedPractitionerRoles"/>
@@ -23,9 +23,9 @@
         <definition value="The Physician who orders the pathology testing"/>
     </concept>
     <concept>
-        <code value="principal-result-interpretter"/>
-        <display value="Pathologist principally interpretting results on pathology testing"/>
-        <definition value="Pathologist principally interpretting results on pathology testing"/>
+        <code value="principal-result-interpreter"/>
+        <display value="Pathologist principally interpreting results on pathology testing"/>
+        <definition value="Pathologist principally interpreting results on pathology testing"/>
     </concept>
     <concept>
         <code value="responsible-observer"/>

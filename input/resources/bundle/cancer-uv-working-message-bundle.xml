@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="cancer-uv-working-message-bundle"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-06-15T16:09:13.348+00:00"/>
-        <source value="#6icbCMeY3qmd2iil"/>
+        <versionId value="4"/>
+        <lastUpdated value="2021-07-20T14:02:30.166+00:00"/>
+        <source value="#6aine3zjF8KkXiJD"/>
         <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-bundle"/>
     </meta>
     <type value="message"/>
@@ -47,6 +47,7 @@
                     <div
                         xmlns="http://www.w3.org/1999/xhtml">
                         <div class="hapiHeaderText">World 
+                            
                             <b>TRAVELER </b>
                         </div>
                         <table class="hapiPropertyTable">
@@ -338,8 +339,8 @@
                 <code>
                     <coding>
                         <system value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/CodeSystem/pathology-related-practitioner-roles"/>
-                        <code value="principal-result-interpretter"/>
-                        <display value="Pathologist principally interpretting results on pathology testing"/>
+                        <code value="principal-result-interpreter"/>
+                        <display value="Pathologist principally interpreting results on pathology testing"/>
                     </coding>
                 </code>
             </PractitionerRole>

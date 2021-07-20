@@ -3,13 +3,13 @@
     xmlns="http://hl7.org/fhir">
     <id value="pathology-message-header"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2021-06-15T15:43:06.369+00:00"/>
-        <source value="#cSYN7yGTwDsefUHe"/>
+        <versionId value="5"/>
+        <lastUpdated value="2021-07-15T21:00:33.075+00:00"/>
+        <source value="#HOQgA31P2pT0Ia5I"/>
     </meta>
     <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-header"/>
-    <name value="PathologyMessageHealder"/>
-    <title value="Pathology Message Healder"/>
+    <name value="PathologyMessageHeader"/>
+    <title value="Pathology Message Header"/>
     <status value="active"/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
