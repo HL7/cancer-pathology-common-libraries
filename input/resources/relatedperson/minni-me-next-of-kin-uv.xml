@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RelatedPerson
     xmlns="http://hl7.org/fhir">
-    <id value="pathology-next-of-kin"/>
+    <id value="minni-me-next-of-kin-uv"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2021-06-22T15:34:35.637+00:00"/>
-        <source value="#m2z2c4UEXQJPZOnS"/>
-        <profile value="http://www.hl7.org/fhir/us/cancer-reporting/StructureDefinition/us-pathology-next-of-kin"/>
+        <versionId value="1"/>
+        <lastUpdated value="2021-06-28T17:48:36.637+00:00"/>
+        <source value="#G2Ti6VrB1fjHwn7o"/>
+        <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-next-of-kin"/>
     </meta>
     <patient>
-        <reference value="Patient/JoelAlexPatient"/>
+        <reference value="Patient/WorldTravelerPatient-uv"/>
     </patient>
     <relationship>
         <coding>

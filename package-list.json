@@ -2,7 +2,7 @@
 	"list": [
 		{
 			"version": "current",
-			"path": "http://build.fhir.org/ig/HL7/cancer-reporting",
+			"path": "http://build.fhir.org/ig/HL7/cancer-reporting-common-library",
 			"desc": "Continuous Integration Build (latest in version control)",
 			"fhirversion": "4.0.1",
 			"date": "",
@@ -13,15 +13,15 @@
 		{
 			"version": "0.1.0",
 			"current": true,
+			"path": "http://hl7.org/fhir/uv/cancer-pathology-common-libraries/2021SEP",
 			"desc": "Ballot for STU Release 1",
-			"path": "http://hl7.org/fhir/us/cancer-reporting/2021SEP",
 			"fhirversion": "4.0.1",
-			"status": "ballot",
-			"sequence": "STU1"
+			"sequence": "STU1",
+			"status": "ballot"
 		}
 	],
-	"package-id": "hl7.fhir.us.cancer-reporting",
-	"title": "Sharing eCC Data from Pathology Labs to EHR",
-	"canonical": "http://hl7.org/fhir/us/cancer-reporting",
+	"package-id": "hl7.fhir.uv.cancer-pathology-common-libraries",
+	"title": "Pathology Data Common Library",
+	"canonical": "http://hl7.org/fhir/uv/cancer-pathology-common-libraries",
 	"category": "Documents"
 }

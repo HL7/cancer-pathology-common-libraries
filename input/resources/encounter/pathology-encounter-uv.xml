@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Encounter
     xmlns="http://hl7.org/fhir">
-    <id value="pathology-encounter"/>
+    <id value="pathology-encounter-uv"/>
     <meta>
         <versionId value="1"/>
-        <lastUpdated value="2021-06-22T14:53:00.210+00:00"/>
-        <source value="#VtC1lWviqpHKWeZL"/>
-        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+        <lastUpdated value="2021-06-28T17:49:19.100+00:00"/>
+        <source value="#E0Ydk2eWsMOlEVb9"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
     </meta>
     <identifier>
         <system value="http://example.com/fhir/encounters"/>
-        <value value="123"/>
+        <value value="xyz"/>
     </identifier>
     <status value="finished"/>
     <class>
@@ -25,16 +25,16 @@
         </coding>
     </type>
     <subject>
-        <reference value="Patient/JoelAlexPatient"/>
+        <reference value="Patient/WorldTravelerPatient-uv"/>
     </subject>
     <participant>
         <individual>
-            <reference value="Practitioner/oncologist-example"/>
+            <reference value="Practitioner/oncologist-example-uv"/>
         </individual>
     </participant>
     <participant>
         <individual>
-            <reference value="Practitioner/pathologist-example"/>
+            <reference value="Practitioner/pathologist-example-uv"/>
         </individual>
     </participant>
 </Encounter>

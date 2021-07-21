@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle
     xmlns="http://hl7.org/fhir">
-    <id value="cancer-us-pathology-message-bundle"/>
+    <id value="cancer-uv-working-message-bundle"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-06-22T15:33:59.454+00:00"/>
-        <source value="#IkUzlYJshVgR94Hr"/>
-        <profile value="http://www.hl7.org/fhir/us/cancer-reporting/StructureDefinition/us-pathology-bundle"/>
+        <versionId value="4"/>
+        <lastUpdated value="2021-07-20T14:02:30.166+00:00"/>
+        <source value="#6aine3zjF8KkXiJD"/>
+        <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-bundle"/>
     </meta>
     <type value="message"/>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/MessageHeader/pathology-message-header"/>
+        <fullUrl value="urn:uuid:1cbdfb97-5859-48a4-8301-d50eab818i88"/>
         <resource>
             <MessageHeader>
-                <id value="pathology-message-header"/>
-                <text>
-                    <status value="generated"/>
-                    <div
-                        xmlns="http://www.w3.org/1999/xhtml">
-                        <p> SDC example Message Bundle for fake patient Jose including Patient, Encounter</p>
-                    </div>
-                </text>
-                <extension url="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-messageProcessingCategory">
-                    <valueCode value="consequence"/>
-                </extension>
                 <eventCoding>
                     <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"/>
                     <code value="cancer-report-message"/>
@@ -38,12 +27,6 @@
                     <name value="IHE SDC on FHIR Parser"/>
                     <endpoint value="http://example.com/fhir/mtuitive-test"/>
                 </source>
-                <reason>
-                    <coding>
-                        <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/>
-                        <code value="new-labresult"/>
-                    </coding>
-                </reason>
                 <focus>
                     <type value="DiagnosticReport"/>
                     <identifier>
@@ -55,23 +38,23 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Patient/JoelAlexPatient"/>
+        <fullUrl value="urn:uuid:2c08e319-f0af-48b3-98df-267cbd376791"/>
         <resource>
             <Patient>
-                <id value="JoelAlexPatient"/>
+                <id value="WorldTravelerPatient"/>
                 <text>
                     <status value="generated"/>
                     <div
                         xmlns="http://www.w3.org/1999/xhtml">
-                        <div class="hapiHeaderText">Jose 
+                        <div class="hapiHeaderText">World 
                             
-                            <b>RODRIGUEZ </b>
+                            <b>TRAVELER </b>
                         </div>
                         <table class="hapiPropertyTable">
                             <tbody>
                                 <tr>
                                     <td>Identifier</td>
-                                    <td>JoelAlexPatient</td>
+                                    <td>WorldTravelerPatient</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -79,24 +62,23 @@
                 </text>
                 <identifier>
                     <system value="urn:system"/>
-                    <value value="JoelAlexPatient"/>
+                    <value value="WorldTravelerPatient"/>
                 </identifier>
                 <name>
-                    <family value="Rodriguez"/>
-                    <given value="Jose"/>
+                    <family value="Traveler"/>
+                    <given value="World"/>
                 </name>
                 <gender value="male"/>
             </Patient>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Encounter/pathology-encounter"/>
+        <fullUrl value="urn:uuid:2c08e319-f0af-48b3-98df-267cbd376926"/>
         <resource>
             <Encounter>
-                <id value="pathology-encounter"/>
                 <identifier>
                     <system value="http://example.com/fhir/encounters"/>
-                    <value value="123"/>
+                    <value value="xyz"/>
                 </identifier>
                 <status value="finished"/>
                 <class>
@@ -111,7 +93,7 @@
                     </coding>
                 </type>
                 <subject>
-                    <reference value="Patient/JoelAlexPatient"/>
+                    <reference value="Patient/WorldTravelerPatient"/>
                 </subject>
                 <participant>
                     <individual>
@@ -120,17 +102,16 @@
                 </participant>
                 <participant>
                     <individual>
-                        <reference value="Practitioner/pathologist-example"/>
+                        <reference value="Practitioner/pathologist-example-uvp"/>
                     </individual>
                 </participant>
             </Encounter>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/DiagnosticReport/pathology-diagnostic-report"/>
+        <fullUrl value="urn:uuid:edfb977c-5e0e-41a9-93a6-c2d3f80b6903"/>
         <resource>
             <DiagnosticReport>
-                <id value="pathology-diagnostic-report"/>
                 <text>
                     <status value="generated"/>
                     <div
@@ -166,15 +147,15 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/JoelAlexPatient"/>
+                    <reference value="Patient/WorldTravelerPatient"/>
                     <display value="Jose Rodriguez"/>
                 </subject>
                 <effectiveDateTime value="2021-01-01T21:39:30.000Z"/>
                 <performer>
-                    <reference value="PractitionerRole/pathologist-example"/>
+                    <reference value="PractitionerRole/pathologist-example-uvpr"/>
                 </performer>
                 <resultsInterpreter>
-                    <reference value="PractitionerRole/pathologist-example"/>
+                    <reference value="PractitionerRole/pathologist-example-uvpr"/>
                 </resultsInterpreter>
                 <result>
                     <reference value="Observation/2020"/>
@@ -269,10 +250,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Specimen/adrenal-example"/>
+        <fullUrl value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/Specimen/adrenal-example-uv"/>
         <resource>
             <Specimen>
-                <id value="adrenal-example"/>
+                <id value="adrenal-example-uv"/>
                 <identifier>
                     <system value="http://some-lis.org/fhir/specimen-identifier-provisioner"/>
                     <value value="123456789"/>
@@ -287,7 +268,7 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/PractitionerRole/oncologist-example"/>
+        <fullUrl value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/PractitionerRole/oncologist-example"/>
         <resource>
             <PractitionerRole>
                 <id value="oncologist-example"/>
@@ -299,7 +280,7 @@
                 </organization>
                 <code>
                     <coding>
-                        <system value="http://www.hl7.org/fhir/us/cancer-reporting/CodeSystem/pathology-provider-types"/>
+                        <system value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/CodeSystem/pathology-related-practitioner-roles"/>
                         <code value="orderer"/>
                         <display value="Physician Ordering Pathology testing"/>
                     </coding>
@@ -345,31 +326,31 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/PractitionerRole/pathologist-example"/>
+        <fullUrl value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/PractitionerRole/pathologist-example-uvpr"/>
         <resource>
             <PractitionerRole>
-                <id value="pathologist-example"/>
+                <id value="pathologist-example-uvpr"/>
                 <practitioner>
-                    <reference value="Practitioner/pathologist-example"/>
+                    <reference value="Practitioner/pathologist-example-uvp"/>
                 </practitioner>
                 <organization>
                     <reference value="Organization/principal-pathology-lab"/>
                 </organization>
                 <code>
                     <coding>
-                        <system value="http://www.hl7.org/fhir/us/cancer-reporting/CodeSystem/pathology-provider-types"/>
-                        <code value="principal-result-interpretter"/>
-                        <display value="Pathologist principally interpretting results on pathology testing"/>
+                        <system value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/CodeSystem/pathology-related-practitioner-roles"/>
+                        <code value="principal-result-interpreter"/>
+                        <display value="Pathologist principally interpreting results on pathology testing"/>
                     </coding>
                 </code>
             </PractitionerRole>
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://example.org/fhir/Practitioner/pathologist-example"/>
+        <fullUrl value="http://example.org/fhir/Practitioner/pathologist-example-uvp"/>
         <resource>
             <Practitioner>
-                <id value="pathologist-example"/>
+                <id value="pathologist-example-uvp"/>
                 <identifier>
                     <system value="http://hl7.org/fhir/sid/us-npi"/>
                     <value value="987654321"/>
@@ -399,12 +380,12 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/RelatedPerson/pathology-next-of-kin"/>
+        <fullUrl value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/RelatedPerson/minni-me-next-of-kin-uv"/>
         <resource>
             <RelatedPerson>
-                <id value="pathology-next-of-kin"/>
+                <id value="minni-me-next-of-kin-uv"/>
                 <patient>
-                    <reference value="Patient/JoelAlexPatient"/>
+                    <reference value="Patient/WorldTravelerPatient"/>
                 </patient>
                 <relationship>
                     <coding>
@@ -425,10 +406,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/2118.100004300"/>
+        <fullUrl value="urn:uuid:2317c384-4d38-497b-b26d-f177d32d3fe2"/>
         <resource>
             <Observation>
-                <id value="2118.100004300"/>
+                <id value="2020"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1#2118.100004300"/>
@@ -454,10 +435,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/42554.100004300"/>
+        <fullUrl value="urn:uuid:900f6b79-8f19-4361-b3f9-0e13d549a7ba"/>
         <resource>
             <Observation>
-                <id value="42554.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1#42554.100004300"/>
@@ -484,10 +464,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/52756.100004300"/>
+        <fullUrl value="urn:uuid:1f995cae-654d-4db7-a9c0-7b1b23315467"/>
         <resource>
             <Observation>
-                <id value="52756.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1#52756.100004300"/>
@@ -514,10 +493,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/59852.100004300"/>
+        <fullUrl value="urn:uuid:9c4e1de7-706d-4375-b5d9-7f4a415141d0"/>
         <resource>
             <Observation>
-                <id value="59852.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1#59852.100004300"/>
@@ -544,10 +522,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/49275.100004300"/>
+        <fullUrl value="urn:uuid:3f83bbaf-db1b-4027-854e-c80cd05b083d"/>
         <resource>
             <Observation>
-                <id value="49275.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1#49275.100004300"/>
@@ -574,10 +551,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/2129.100004300"/>
+        <fullUrl value="urn:uuid:65a2cf43-0f88-4e56-84e5-18f06a840161"/>
         <resource>
             <Observation>
-                <id value="2129.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1#2129.100004300"/>
@@ -604,10 +580,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/40496.100004300"/>
+        <fullUrl value="urn:uuid:d79b44fe-589b-4615-80e1-0ae058e90879"/>
         <resource>
             <Observation>
-                <id value="40496.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1#40496.100004300"/>
@@ -634,10 +609,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/51265.100004300"/>
+        <fullUrl value="urn:uuid:49f02a44-e44f-4eac-8305-9eca2f9ac17b"/>
         <resource>
             <Observation>
-                <id value="51265.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1.51265.100004300"/>
@@ -675,10 +649,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/53526.100004300"/>
+        <fullUrl value="urn:uuid:5f7d6ef0-073b-457c-9177-ff5a503044f5"/>
         <resource>
             <Observation>
-                <id value="53526.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1.53526.100004300"/>
@@ -706,10 +679,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/1867.100004300"/>
+        <fullUrl value="urn:uuid:0319e121-c139-4d2b-b829-1a37760369af"/>
         <resource>
             <Observation>
-                <id value="1867.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1.1867.100004300"/>
@@ -738,10 +710,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/20880.100004300"/>
+        <fullUrl value="urn:uuid:952c37d3-7952-4e54-99bb-d3d37e0b004b"/>
         <resource>
             <Observation>
-                <id value="20880.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1.20880.100004300"/>
@@ -770,10 +741,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/2137.100004300"/>
+        <fullUrl value="urn:uuid:16cbc45e-a4b8-4fef-b6fc-548ebd8f6491"/>
         <resource>
             <Observation>
-                <id value="2137.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1#2137.100004300"/>
@@ -800,10 +770,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/2143.100004300"/>
+        <fullUrl value="urn:uuid:2682a3fe-d0cb-46f1-bbee-7e6c32fb1f13"/>
         <resource>
             <Observation>
-                <id value="2143.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1#2143.100004300"/>
@@ -830,10 +799,9 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://www.hl7.org/fhir/us/cancer-reporting/Observation/2149.100004300"/>
+        <fullUrl value="urn:uuid:0e0aec76-9e4a-48a8-9ca2-03f78419fc35"/>
         <resource>
             <Observation>
-                <id value="2149.100004300"/>
                 <identifier>
                     <system value="https://CAP.org"/>
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1#2149.100004300"/>

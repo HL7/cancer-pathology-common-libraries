@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
-    <id value="us-pathology-bundle"/>
+    <id value="pathology-message-bundle"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-07-17T21:05:54.979+00:00"/>
-        <source value="#Z2fmsiaC8v8zuQWa"/>
+        <versionId value="6"/>
+        <lastUpdated value="2021-06-15T15:37:39.133+00:00"/>
+        <source value="#Ecmw4bj69GWAFjHJ"/>
     </meta>
-    <url value="http://www.hl7.org/fhir/us/cancer-reporting/StructureDefinition/us-pathology-bundle"/>
-    <name value="USPathologyBundle"/>
-    <title value="US Pathology Bundle"/>
+    <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-bundle"/>
+    <name value="PathologyMessageBundle"/>
+    <title value="Pathology Message Bundle"/>
     <status value="active"/>
-    <description value="This message bundle profile defines the structure of a NAACCR v5 FHIR message that is sent from a pathology environment into an EHR environment. Note- US Core profiles are expected for Organization, Practitioner, and Procedure, when such information is known to the source LIS."/>
     <fhirVersion value="4.0.1"/>
     <kind value="resource"/>
     <abstract value="false"/>
@@ -25,11 +24,6 @@
         <element id="Bundle.type">
             <path value="Bundle.type"/>
             <fixedCode value="message"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Bundle.timestamp">
-            <path value="Bundle.timestamp"/>
-            <mustSupport value="true"/>
         </element>
         <element id="Bundle.entry">
             <path value="Bundle.entry"/>
@@ -40,126 +34,122 @@
                 </discriminator>
                 <rules value="open"/>
             </slicing>
-            <min value="1"/>
-            <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:message_header">
+        <element id="Bundle.entry:pathology_message_header">
             <path value="Bundle.entry"/>
-            <sliceName value="message_header"/>
+            <sliceName value="pathology_message_header"/>
             <min value="1"/>
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:message_header.resource">
+        <element id="Bundle.entry:pathology_message_header.resource">
             <path value="Bundle.entry.resource"/>
             <min value="1"/>
             <type>
                 <code value="Resource"/>
-                <profile value="http://www.hl7.org/fhir/us/cancer-reporting/StructureDefinition/us-pathology-message-header"/>
+                <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-header"/>
             </type>
-            <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:us_core_patient">
+        <element id="Bundle.entry:patient">
             <path value="Bundle.entry"/>
-            <sliceName value="us_core_patient"/>
+            <sliceName value="patient"/>
             <min value="1"/>
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:us_core_patient.resource">
+        <element id="Bundle.entry:patient.resource">
             <path value="Bundle.entry.resource"/>
             <min value="1"/>
+            <max value="1"/>
             <type>
                 <code value="Resource"/>
-                <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
             </type>
             <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:us_core_encounter">
+        <element id="Bundle.entry:encounter">
             <path value="Bundle.entry"/>
-            <sliceName value="us_core_encounter"/>
-            <min value="0"/>
+            <sliceName value="encounter"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:encounter.resource">
+            <path value="Bundle.entry.resource"/>
+            <type>
+                <code value="Resource"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Bundle.entry:diagnostic_report">
+            <path value="Bundle.entry"/>
+            <sliceName value="diagnostic_report"/>
+            <min value="1"/>
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:us_core_encounter.resource">
+        <element id="Bundle.entry:diagnostic_report.resource">
             <path value="Bundle.entry.resource"/>
-            <min value="1"/>
-            <type>
-                <code value="Resource"/>
-                <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
-            </type>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Bundle.entry:diagnosticreport">
-            <path value="Bundle.entry"/>
-            <sliceName value="diagnosticreport"/>
             <min value="1"/>
             <max value="1"/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="Bundle.entry:diagnosticreport.resource">
-            <path value="Bundle.entry.resource"/>
-            <min value="1"/>
             <type>
                 <code value="Resource"/>
-                <profile value="http://www.hl7.org/fhir/us/cancer-reporting/StructureDefinition/pathology-diagnostic-report"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport"/>
             </type>
+            <mustSupport value="true"/>
         </element>
         <element id="Bundle.entry:specimen">
             <path value="Bundle.entry"/>
             <sliceName value="specimen"/>
             <min value="1"/>
+            <max value="1"/>
             <mustSupport value="true"/>
         </element>
         <element id="Bundle.entry:specimen.resource">
             <path value="Bundle.entry.resource"/>
-            <min value="1"/>
             <type>
                 <code value="Resource"/>
-                <profile value="http://www.hl7.org/fhir/us/cancer-reporting/StructureDefinition/pathology-specimen"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
             </type>
+            <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:observation">
+        <element id="Bundle.entry:pathology_observation">
             <path value="Bundle.entry"/>
-            <sliceName value="observation"/>
+            <sliceName value="pathology_observation"/>
             <min value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:observation.resource">
+        <element id="Bundle.entry:pathology_observation.resource">
             <path value="Bundle.entry.resource"/>
-            <min value="1"/>
             <type>
                 <code value="Resource"/>
                 <profile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
             </type>
+            <mustSupport value="true"/>
         </element>
         <element id="Bundle.entry:next_of_kin">
             <path value="Bundle.entry"/>
             <sliceName value="next_of_kin"/>
+            <min value="0"/>
             <mustSupport value="true"/>
         </element>
         <element id="Bundle.entry:next_of_kin.resource">
             <path value="Bundle.entry.resource"/>
-            <min value="1"/>
             <type>
                 <code value="Resource"/>
-                <profile value="http://www.hl7.org/fhir/us/cancer-reporting/StructureDefinition/next-of-kin"/>
+                <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-next-of-kin"/>
             </type>
-            <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:pathology-related-practitioner">
+        <element id="Bundle.entry:pathology_related_practitioner">
             <path value="Bundle.entry"/>
-            <sliceName value="pathology-related-practitioner"/>
+            <sliceName value="pathology_related_practitioner"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Bundle.entry:pathology-related-practitioner.resource">
+        <element id="Bundle.entry:pathology_related_practitioner.resource">
             <path value="Bundle.entry.resource"/>
             <type>
                 <code value="Resource"/>
-                <profile value="http://www.hl7.org/fhir/us/cancer-reporting/StructureDefinition/pathology-related-practitioner-role"/>
+                <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-practitioner-role"/>
             </type>
-            <mustSupport value="true"/>
         </element>
     </differential>
 </StructureDefinition>

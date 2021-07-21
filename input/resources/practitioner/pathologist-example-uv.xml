@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Practitioner
     xmlns="http://hl7.org/fhir">
-    <id value="pathologist-example"/>
+    <id value="pathologist-example-uv"/>
     <meta>
         <versionId value="1"/>
-        <lastUpdated value="2021-06-22T14:54:29.055+00:00"/>
-        <source value="#cZxJw0rMl5usCvEV"/>
-        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+        <lastUpdated value="2021-06-28T17:50:04.774+00:00"/>
+        <source value="#xBnpnXH8GrtP6QsC"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
     </meta>
     <identifier>
         <system value="http://hl7.org/fhir/sid/us-npi"/>
