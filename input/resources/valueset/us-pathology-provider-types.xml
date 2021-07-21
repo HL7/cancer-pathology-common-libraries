@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet
     xmlns="http://hl7.org/fhir">
-    <id value="pathology-related-practitioner-roles"/>
+    <id value="us-pathology-provider-types"/>
     <meta>
         <versionId value="3"/>
-        <lastUpdated value="2021-07-16T14:25:53.527+00:00"/>
-        <source value="#Sx2RDrBC4Flzyx7v"/>
+        <lastUpdated value="2021-07-17T21:10:15.000+00:00"/>
+        <source value="#V0TMi74S4HqxgokF"/>
     </meta>
-    <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/ValueSet/pathology-related-practitioner-roles"/>
-    <name value="PathologyRelatedPractitionerRoles"/>
-    <title value="Pathology Related PractitionerRoles"/>
+    <url value="http://www.hl7.org/fhir/us/cancer-reporting/ValueSet/us-pathology-provider-types"/>
+    <name value="USPathologyProviderTypes"/>
+    <title value="US Pathology Provider Types"/>
     <status value="draft"/>
+    <description value="ValueSet for Practitioner roles within NAACCR reporting. This ValueSet is composed of HL7 ParticipationType codes (found in PV1) and concepts from Pathology Provider Types CodeSystem (found in OBR). "/>
     <compose>
         <include>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
@@ -33,7 +34,7 @@
             </concept>
         </include>
         <include>
-            <system value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/CodeSystem/pathology-related-practitioner-roles"/>
+            <system value="http://www.hl7.org/fhir/us/cancer-reporting/CodeSystem/pathology-provider-types"/>
             <concept>
                 <code value="collector"/>
                 <display value="Physician Primary Surgeon"/>
@@ -43,8 +44,8 @@
                 <display value="Physician Ordering Pathology testing"/>
             </concept>
             <concept>
-                <code value="principal-result-interpreter"/>
-                <display value="Pathologist principally interpreting results on pathology testing"/>
+                <code value="principal-result-interpretter"/>
+                <display value="Pathologist principally interpretting results on pathology testing"/>
             </concept>
             <concept>
                 <code value="responsible-observer"/>
