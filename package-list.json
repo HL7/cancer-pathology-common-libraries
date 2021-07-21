@@ -8,16 +8,16 @@
 			"date": "",
 			"sequence": "CI build",
 			"status": "ci-build",
-			"current": false
+			"current": true
 		},
 		{
 			"version": "0.1.0",
-			"current": true,
 			"path": "http://hl7.org/fhir/uv/cancer-pathology-common-libraries/2021SEP",
 			"desc": "Ballot for STU Release 1",
 			"fhirversion": "4.0.1",
 			"sequence": "STU1",
-			"status": "ballot"
+			"status": "ballot",
+			"date": "2021-07-21"
 		}
 	],
 	"package-id": "hl7.fhir.uv.cancer-pathology-common-libraries",
