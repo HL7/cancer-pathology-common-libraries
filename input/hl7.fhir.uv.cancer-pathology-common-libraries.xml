@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="hl7.fhir.uv.cancer-pathology-common-libraries"/>
     <meta>
-        <versionId value="72"/>
-        <lastUpdated value="2021-07-21T13:50:45.752+00:00"/>
-        <source value="#3s0Du2b2upaKRNu5"/>
+        <versionId value="80"/>
+        <lastUpdated value="2021-07-23T20:40:17.461+00:00"/>
+        <source value="#cezaSzbBTbMEZc88"/>
     </meta>
     <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/ImplementationGuide/hl7.fhir.uv.cancer-pathology-common-libraries"/>
     <version value="0.1.0"/>
@@ -30,6 +30,11 @@
     </jurisdiction>
     <packageId value="hl7.fhir.uv.cancer-pathology-common-libraries"/>
     <fhirVersion value="4.0.1"/>
+    <dependsOn id="medmorph">
+        <uri value="http://hl7.org/fhir/us/medmorph/ImplementationGuide/hl7.fhir.us.medmorph#0.1.0"/>
+        <packageId value="hl7.fhir.us.medmorph"/>
+        <version value="0.1.0"/>
+    </dependsOn>
     <definition>
         <grouping id="new-group1">
             <name value="Profiles"/>
@@ -102,31 +107,11 @@
         </resource>
         <resource>
             <reference>
-                <reference value="ValueSet/us-ph-message-types"/>
-                <display value="US Public Health MessageTypes"/>
-            </reference>
-            <name value="US Public Health MessageTypes"/>
-            <description value="This ValueSet specifies possible concepts for MessageHeader types in the sharing of pathology and clinical information exchange."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group2"/>
-        </resource>
-        <resource>
-            <reference>
                 <reference value="ValueSet/pathology-related-practitioner-roles"/>
                 <display value="Pathology Related PractitionerRoles"/>
             </reference>
             <name value="Pathology Related PractitionerRoles ValueSet"/>
             <description value="This ValueSet specifies possible concepts for roles related to pathology and clinical information exchange."/>
-            <exampleBoolean value="false"/>
-            <groupingId value="new-group2"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="CodeSystem/us-ph-messageheader-message-types"/>
-                <display value="US Public Health Message Type Codes"/>
-            </reference>
-            <name value="US Public Health Message Type Code System"/>
-            <description value="This CodeSystem is bound as with an Example binding strength and is intended to show possible concepts for roles related to pathology and clinical information exchange."/>
             <exampleBoolean value="false"/>
             <groupingId value="new-group2"/>
         </resource>
@@ -215,6 +200,15 @@
             <description value="Universal Pathology Organization example"/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+            <groupingId value="new-group3"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="DiagnosticReport/pathology-diagnosticreport-uv"/></reference>
+            <name value="Pathology Adrenal DiagnosticReport (example)"/>
+            <description value="Example of a DiagnosticReport containing information regarding pathological testing and resulting observations"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-diagnostic-report"/>
             <groupingId value="new-group3"/>
         </resource>
         <resource>

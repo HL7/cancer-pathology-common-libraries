@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="cancer-uv-working-message-bundle"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2021-07-20T14:02:30.166+00:00"/>
-        <source value="#6aine3zjF8KkXiJD"/>
+        <versionId value="9"/>
+        <lastUpdated value="2021-07-23T20:18:21.767+00:00"/>
+        <source value="#jilttwqFUgkVhRXi"/>
         <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-bundle"/>
     </meta>
     <type value="message"/>
@@ -47,6 +47,7 @@
                     <div
                         xmlns="http://www.w3.org/1999/xhtml">
                         <div class="hapiHeaderText">World 
+                            
                             
                             <b>TRAVELER </b>
                         </div>
@@ -109,9 +110,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="urn:uuid:edfb977c-5e0e-41a9-93a6-c2d3f80b6903"/>
+        <fullUrl value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/DiagnosticReport/pathology-diagnosticreport-uv"/>
         <resource>
             <DiagnosticReport>
+                <id value="pathology-diagnosticreport-uv"/>
                 <text>
                     <status value="generated"/>
                     <div
@@ -132,13 +134,6 @@
                     <value value="Adrenal.Bx.Res.129_3.002.011.RC1_sdcFDF3d1c4fe4-09c3-4a7e-877f-9ddb160da6db/ver1"/>
                 </identifier>
                 <status value="final"/>
-                <category>
-                    <coding>
-                        <system value="http://loinc.org"/>
-                        <code value="LP7839-6"/>
-                        <display value="Pathology"/>
-                    </coding>
-                </category>
                 <code>
                     <coding>
                         <system value="http://loinc.org"/>
@@ -152,10 +147,10 @@
                 </subject>
                 <effectiveDateTime value="2021-01-01T21:39:30.000Z"/>
                 <performer>
-                    <reference value="PractitionerRole/pathologist-example-uvpr"/>
+                    <reference value="PractitionerRole/pathologist-example-uv"/>
                 </performer>
                 <resultsInterpreter>
-                    <reference value="PractitionerRole/pathologist-example-uvpr"/>
+                    <reference value="PractitionerRole/pathologist-example-uv"/>
                 </resultsInterpreter>
                 <result>
                     <reference value="Observation/2020"/>
@@ -264,6 +259,12 @@
                         <code value="BX"/>
                     </coding>
                 </type>
+                <container>
+                    <identifier>
+                        <system value="http://some-lis.org/fhir/specimen-containerID-provisioner"/>
+                        <value value="987654321"/>
+                    </identifier>
+                </container>
             </Specimen>
         </resource>
     </entry>

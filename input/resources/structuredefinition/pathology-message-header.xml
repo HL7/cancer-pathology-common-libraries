@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="pathology-message-header"/>
     <meta>
-        <versionId value="5"/>
-        <lastUpdated value="2021-07-15T21:00:33.075+00:00"/>
-        <source value="#HOQgA31P2pT0Ia5I"/>
+        <versionId value="6"/>
+        <lastUpdated value="2021-07-23T20:29:45.327+00:00"/>
+        <source value="#OawvFTGurOBYgcEo"/>
     </meta>
     <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-header"/>
     <name value="PathologyMessageHeader"/>
@@ -25,7 +25,7 @@
             <path value="MessageHeader.event[x]"/>
             <binding>
                 <strength value="example"/>
-                <valueSet value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/ValueSet/us-ph-message-types"/>
+                <valueSet value="http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-message-types"/>
             </binding>
         </element>
         <element id="MessageHeader.focus">
