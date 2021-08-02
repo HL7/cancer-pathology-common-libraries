@@ -20,7 +20,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="urn:uuid:2c08e319-f0af-48b3-98df-267cbd376791"/>
+      <reference value="Patient/WorldTravelerPatient-uv"/>
     </subject>
     <component>
         <code>

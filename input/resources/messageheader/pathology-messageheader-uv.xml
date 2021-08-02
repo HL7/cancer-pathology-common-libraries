@@ -1,0 +1,21 @@
+<MessageHeader>
+  <id value="pathology-messageheader-uv"/>
+  <eventCoding>
+    <system
+      value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types" />
+    <code value="cancer-report-message" />
+  </eventCoding>
+  <destination>
+    <endpoint value="http://example.com/fhir/cerner-test" />
+  </destination>
+  <sender>
+    <reference value="Organization/Redwood-Womens-Center-PC-uv" />
+  </sender>
+  <source>
+    <name value="IHE SDC on FHIR Parser" />
+    <endpoint value="http://example.com/fhir/mtuitive-test" />
+  </source>
+  <focus>
+    <reference value="DiagnosticReport/pathology-diagnosticreport-uv" />
+  </focus>
+</MessageHeader>

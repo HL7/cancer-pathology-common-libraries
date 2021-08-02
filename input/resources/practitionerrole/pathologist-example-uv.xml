@@ -6,7 +6,7 @@
         <versionId value="3"/>
         <lastUpdated value="2021-07-16T14:21:01.652+00:00"/>
         <source value="#SW7HuOZdogmfSzjk"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+      <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-practitioner-role"/>
     </meta>
     <practitioner>
         <reference value="Practitioner/pathologist-example-uv"/>
