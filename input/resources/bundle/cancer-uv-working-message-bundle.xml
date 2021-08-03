@@ -297,7 +297,7 @@
   </entry>
   <entry>
     <fullUrl
-      value="http://www.hl7.org/fhir/uv/http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/Organization/Redwood-Womens-Center-PC-uv" />
+      value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/Organization/Redwood-Womens-Center-PC-uv" />
     <resource>
       <Organization>
         <id value="Redwood-Womens-Center-PC-uv" />
