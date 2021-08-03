@@ -72,7 +72,7 @@
         <gender value="male" />
         <link>
           <other>
-            <reference value="RelatedPerson/pathology-next-of-kin-uv"/>
+            <reference value="RelatedPerson/minni-me-next-of-kin-uv"/>
           </other>
           <type value="seealso"/>
         </link>
