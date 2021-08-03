@@ -38,10 +38,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/Patient/WorldTravelerPatient" />
+    <fullUrl value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/Patient/WorldTravelerPatient-uv" />
     <resource>
       <Patient>
-        <id value="WorldTravelerPatient" />
+        <id value="WorldTravelerPatient-uv" />
         <text>
           <status value="generated" />
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -70,6 +70,12 @@
           <given value="World" />
         </name>
         <gender value="male" />
+        <link>
+          <other>
+            <reference value="RelatedPerson/pathology-next-of-kin-uv"/>
+          </other>
+          <type value="seealso"/>
+        </link>
       </Patient>
     </resource>
   </entry>
@@ -156,6 +162,9 @@
           <reference value="Patient/WorldTravelerPatient-uv" />
           <display value="Jose Rodriguez" />
         </subject>
+        <encounter>
+          <reference value="Encounter/pathology-encounter-uv"/>
+        </encounter>
         <effectiveDateTime value="2021-01-01T21:39:30.000Z" />
         <performer>
           <reference value="PractitionerRole/pathologist-example-uv" />

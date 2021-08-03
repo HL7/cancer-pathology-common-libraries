@@ -34,4 +34,10 @@
         <given value="World"/>
     </name>
     <gender value="male"/>
+  <link>
+    <other>
+      <reference value="RelatedPerson/pathology-next-of-kin-uv"/>
+    </other>
+    <type value="seealso"/>
+  </link>
 </Patient>

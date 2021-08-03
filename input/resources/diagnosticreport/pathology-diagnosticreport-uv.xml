@@ -40,9 +40,9 @@
     <reference value="Patient/WorldTravelerPatient-uv" />
     <display value="Jose Rodriguez" />
   </subject>
-  <specimen>
-    <reference value="Specimen/adrenal-example-uv"/>
-  </specimen>
+  <encounter>
+    <reference value="Encounter/pathology-encounter-uv"/>
+  </encounter>
   <effectiveDateTime value="2021-01-01T21:39:30.000Z" />
   <performer>
     <reference value="PractitionerRole/pathologist-example-uv" />
