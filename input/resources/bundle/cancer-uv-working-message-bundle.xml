@@ -378,7 +378,7 @@
       <RelatedPerson>
         <id value="minni-me-next-of-kin-uv" />
         <patient>
-          <reference value="Patient/WorldTravelerPatient" />
+          <reference value="Patient/WorldTravelerPatient-uv" />
         </patient>
         <relationship>
           <coding>
