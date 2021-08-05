@@ -1,21 +1,27 @@
-<MessageHeader>
-  <id value="pathology-messageheader-uv"/>
-  <eventCoding>
-    <system
-      value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types" />
-    <code value="cancer-report-message" />
-  </eventCoding>
-  <destination>
-    <endpoint value="http://example.com/fhir/cerner-test" />
-  </destination>
-  <sender>
-    <reference value="Organization/Redwood-Womens-Center-PC-uv" />
-  </sender>
-  <source>
-    <name value="IHE SDC on FHIR Parser" />
-    <endpoint value="http://example.com/fhir/mtuitive-test" />
-  </source>
-  <focus>
-    <reference value="DiagnosticReport/pathology-diagnosticreport-uv" />
-  </focus>
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageHeader
+    xmlns="http://hl7.org/fhir">
+    <id value="pathology-messageheader-uv"/>
+    <meta>
+        <versionId value="2"/>
+        <lastUpdated value="2021-08-02T21:32:00.312+00:00"/>
+        <source value="#DGBGwFsvftIZgb4F"/>
+    </meta>
+    <eventCoding>
+        <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"/>
+        <code value="cancer-report-message"/>
+    </eventCoding>
+    <destination>
+        <endpoint value="http://example.com/fhir/cerner-test"/>
+    </destination>
+    <sender>
+        <reference value="Organization/Redwood-Womens-Center-PC-uv"/>
+    </sender>
+    <source>
+        <name value="IHE SDC on FHIR Parser"/>
+        <endpoint value="http://example.com/fhir/mtuitive-test"/>
+    </source>
+    <focus>
+        <reference value="DiagnosticReport/pathology-diagnosticreport-uv"/>
+    </focus>
 </MessageHeader>

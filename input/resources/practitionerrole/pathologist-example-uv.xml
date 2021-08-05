@@ -3,10 +3,10 @@
     xmlns="http://hl7.org/fhir">
     <id value="pathologist-example-uv"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2021-07-16T14:21:01.652+00:00"/>
-        <source value="#SW7HuOZdogmfSzjk"/>
-      <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-practitioner-role"/>
+        <versionId value="4"/>
+        <lastUpdated value="2021-08-02T21:18:41.878+00:00"/>
+        <source value="#XL5blcAerC2qHn8O"/>
+        <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-practitioner-role"/>
     </meta>
     <practitioner>
         <reference value="Practitioner/pathologist-example-uv"/>

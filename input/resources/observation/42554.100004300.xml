@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="42554.100004300"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-22T14:53:18.982+00:00"/>
-        <source value="#ZjMCP0FKFI2nBGua"/>
+        <versionId value="2"/>
+        <lastUpdated value="2021-08-02T21:47:36.040+00:00"/>
+        <source value="#IWbBxgZsHoyrJQCV"/>
     </meta>
     <identifier>
         <system value="https://CAP.org"/>
@@ -20,7 +20,7 @@
         </coding>
     </code>
     <subject>
-      <reference value="Patient/WorldTravelerPatient-uv"/>
+        <reference value="Patient/WorldTravelerPatient-uv"/>
     </subject>
     <valueCodeableConcept>
         <coding>

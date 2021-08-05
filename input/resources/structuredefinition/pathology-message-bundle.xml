@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="pathology-message-bundle"/>
     <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2021-06-15T15:37:39.133+00:00"/>
-        <source value="#Ecmw4bj69GWAFjHJ"/>
+        <versionId value="7"/>
+        <lastUpdated value="2021-08-02T22:01:43.464+00:00"/>
+        <source value="#F9fN04R2RW1pakB9"/>
     </meta>
     <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-bundle"/>
     <name value="PathologyMessageBundle"/>
@@ -93,7 +93,7 @@
             <max value="1"/>
             <type>
                 <code value="Resource"/>
-                <profile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport"/>
+                <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-diagnostic-report"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -108,7 +108,7 @@
             <path value="Bundle.entry.resource"/>
             <type>
                 <code value="Resource"/>
-                <profile value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
+                <profile value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-specimen"/>
             </type>
             <mustSupport value="true"/>
         </element>

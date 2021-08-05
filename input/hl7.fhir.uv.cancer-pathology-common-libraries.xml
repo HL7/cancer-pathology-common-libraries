@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="hl7.fhir.uv.cancer-pathology-common-libraries"/>
     <meta>
-        <versionId value="80"/>
-        <lastUpdated value="2021-07-23T20:40:17.461+00:00"/>
-        <source value="#cezaSzbBTbMEZc88"/>
+        <versionId value="83"/>
+        <lastUpdated value="2021-08-05T21:36:52.533+00:00"/>
+        <source value="#xlnYPR5YfHofM01t"/>
     </meta>
     <url value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/ImplementationGuide/hl7.fhir.uv.cancer-pathology-common-libraries"/>
     <version value="0.1.0"/>
@@ -130,10 +130,28 @@
                 <reference value="Bundle/cancer-uv-working-message-bundle"/>
                 <display value="Pathology message Bundle"/>
             </reference>
-            <name value="Universal Bundle example"/>
+            <name value="Pathology Report Bundle"/>
             <description value="This message Bundle exemplifies the information that should be shared from a pathology system into a clinical EHR system. It includes information that may be found in a HL7v2 ORU message including the patient, next of kin, associated providers, the pathology order and associated individual results."/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-bundle"/>
+            <groupingId value="new-group3"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="MessageHeader/pathology-messageheader-uv"/></reference>
+            <name value="Pathology Report MessageHeader"/>
+            <description value="General Pathology Report MessageHeader example"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-message-header"/>
+            <groupingId value="new-group3"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="DiagnosticReport/pathology-diagnosticreport-uv"/></reference>
+            <name value="Pathology Adrenal DiagnosticReport"/>
+            <description value="Example of a DiagnosticReport containing information regarding pathological testing and resulting observations"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-diagnostic-report"/>
             <groupingId value="new-group3"/>
         </resource>
         <resource>
@@ -149,39 +167,6 @@
         </resource>
         <resource>
             <reference>
-                <reference value="RelatedPerson/minni-me-next-of-kin-uv"/>
-                <display value="RelatedPerson- Next of Kin example"/>
-            </reference>
-            <name value="RelatedPerson- Next of Kin example"/>
-            <description value="Universal next of Kin RelatedPerson example"/>
-            <exampleBoolean value="false"/>
-            <exampleCanonical value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-next-of-kin"/>
-            <groupingId value="new-group3"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Organization/principal-pathology-lab-uv"/>
-                <display value="Principal Pathology Lab Name"/>
-            </reference>
-            <name value="Organization- Principal Pathology Lab Name"/>
-            <description value="Universal Principal Lab Ordering Organization example"/>
-            <exampleBoolean value="false"/>
-            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-            <groupingId value="new-group3"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="Patient/WorldTravelerPatient-uv"/>
-                <display value="Patient- World Traveler"/>
-            </reference>
-            <name value="Patient- World Traveler"/>
-            <description value="Universal Pathology Patient: World Traveler example"/>
-            <exampleBoolean value="false"/>
-            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-            <groupingId value="new-group3"/>
-        </resource>
-        <resource>
-            <reference>
                 <reference value="Encounter/pathology-encounter-uv"/>
                 <display value="Encounter- pathology-realted encounter"/>
             </reference>
@@ -193,22 +178,24 @@
         </resource>
         <resource>
             <reference>
-                <reference value="Organization/Redwood-Womens-Center-PC-uv"/>
-                <display value="Redwood Women's Center, P.C."/>
+                <reference value="RelatedPerson/minni-me-next-of-kin-uv"/>
+                <display value="RelatedPerson- Next of Kin example"/>
             </reference>
-            <name value="Redwood Women's Center, P.C."/>
-            <description value="Universal Pathology Organization example"/>
+            <name value="RelatedPerson- Next of Kin example"/>
+            <description value="Universal next of Kin RelatedPerson example"/>
             <exampleBoolean value="false"/>
-            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+            <exampleCanonical value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-next-of-kin"/>
             <groupingId value="new-group3"/>
         </resource>
         <resource>
             <reference>
-                <reference value="DiagnosticReport/pathology-diagnosticreport-uv"/></reference>
-            <name value="Pathology Adrenal DiagnosticReport (example)"/>
-            <description value="Example of a DiagnosticReport containing information regarding pathological testing and resulting observations"/>
+                <reference value="Patient/WorldTravelerPatient-uv"/>
+                <display value="Patient- World Traveler"/>
+            </reference>
+            <name value="Patient- World Traveler"/>
+            <description value="Universal Pathology Patient: World Traveler example"/>
             <exampleBoolean value="false"/>
-            <exampleCanonical value="http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries/StructureDefinition/pathology-diagnostic-report"/>
+            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Patient"/>
             <groupingId value="new-group3"/>
         </resource>
         <resource>
@@ -253,6 +240,28 @@
             <description value="Universal Pathologist PractitionerRole example"/>
             <exampleBoolean value="false"/>
             <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+            <groupingId value="new-group3"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/Redwood-Womens-Center-PC-uv"/>
+                <display value="Redwood Women's Center, P.C."/>
+            </reference>
+            <name value="Redwood Women's Center, P.C."/>
+            <description value="Universal Pathology Organization example"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+            <groupingId value="new-group3"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/principal-pathology-lab-uv"/>
+                <display value="Principal Pathology Lab Name"/>
+            </reference>
+            <name value="Organization- Principal Pathology Lab Name"/>
+            <description value="Universal Principal Lab Ordering Organization example"/>
+            <exampleBoolean value="false"/>
+            <exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Organization"/>
             <groupingId value="new-group3"/>
         </resource>
         <resource>

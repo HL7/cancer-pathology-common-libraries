@@ -3,9 +3,9 @@
     xmlns="http://hl7.org/fhir">
     <id value="WorldTravelerPatient-uv"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2021-06-28T17:48:36.607+00:00"/>
-        <source value="#01ekNpCZ1py6t7MR"/>
+        <versionId value="6"/>
+        <lastUpdated value="2021-08-03T00:12:40.622+00:00"/>
+        <source value="#kFbjUnnibc2uDHiW"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
     </meta>
     <text>
@@ -13,6 +13,7 @@
         <div
             xmlns="http://www.w3.org/1999/xhtml">
             <div class="hapiHeaderText">World 
+                
                 <b>TRAVELER-UNIVERSAL </b>
             </div>
             <table class="hapiPropertyTable">
@@ -34,10 +35,10 @@
         <given value="World"/>
     </name>
     <gender value="male"/>
-  <link>
-    <other>
-      <reference value="RelatedPerson/minni-me-next-of-kin-uv"/>
-    </other>
-    <type value="seealso"/>
-  </link>
+    <link>
+        <other>
+            <reference value="RelatedPerson/minni-me-next-of-kin-uv"/>
+        </other>
+        <type value="seealso"/>
+    </link>
 </Patient>

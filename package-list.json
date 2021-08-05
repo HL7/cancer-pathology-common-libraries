@@ -22,6 +22,6 @@
 	],
 	"package-id": "hl7.fhir.uv.cancer-pathology-common-libraries",
 	"title": "Pathology Data Common Library",
-	"canonical": "http://hl7.org/fhir/uv/cancer-pathology-common-libraries",
+	"canonical": "http://www.hl7.org/fhir/uv/cancer-pathology-common-libraries",
 	"category": "Documents"
 }
