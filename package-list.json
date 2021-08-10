@@ -11,7 +11,7 @@
     },
     {
       "version": "0.1.0",
-      "path": "http://hl7.org/fhir/uv/cancer-pathology-common-libraries/2021SEP",
+      "path": "http://hl7.org/fhir/uv/cancer-pathology-common-libraries/2021Sep",
       "desc": "Ballot for STU Release 1",
       "fhirversion": "4.0.1",
       "sequence": "STU1",
